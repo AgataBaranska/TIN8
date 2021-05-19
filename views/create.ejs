@@ -1,23 +1,10 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
-</head>
+<%- include('./partials/head.ejs') %>
 
 <body>
-    <h1>Optican</h1>
-    <nav>
-        <div>
-            <li><a href='/api/products'>Products</a></li>
-            <li><a href='/api/products/create'>Create</a></li>
-        </div>
-    </nav>
+    <%- include('./partials/nav.ejs') %>
     <div>
         <h1>Create new product: </h1>
         <form>
@@ -26,6 +13,7 @@
             <button>Submit</button>
         </form>
     </div>
+    <%- include('./partials/footer.ejs') %>
 </body>
 
 </html>

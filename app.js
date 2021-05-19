@@ -1,23 +1,12 @@
 const express = require('express');
+const fs = require('fs');
 const app = express();
 //register view engine
 app.set('view engine', 'ejs');
 //listen for requests
 app.listen(3000);
 
-const products = [{
-        id: 1,
-        name: 'mod1234'
-    },
-    {
-        id: 2,
-        name: 'mod1234'
-    },
-    {
-        id: 3,
-        name: 'mod1234'
-    },
-];
+const products = require('./models/products.js');
 
 app.get('/api/products', (req, res) => {
     res.render('index', {
@@ -29,8 +18,8 @@ app.get('/api/products/create', (req, res) => {
     res.render('create');
 });
 
-app.get('/api/courses/:id', (req, res) => {
+app.get('/api/products/:id', (req, res) => {
     const product = products.find(p => p.id === parseInt(req.params.id))
     if (!product) res.status(404).send('The product with given id was not found');
-    res.send(product);
+    res.render('product', product);
 });
