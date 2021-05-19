@@ -1,0 +1,15 @@
+{
+  "name": "tin8",
+  "version": "0.0.1",
+  "description": "TIN8 exercise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}
